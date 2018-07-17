@@ -31,7 +31,7 @@ yaletown.mens_apparel = true
 yaletown.womens_apparel = true
 yaletown.save
 
-@mens_stores = Store.where(mens_apparel: true)
+@mens_stores = Store.where(mens_apparel: true, womens_apparel: false)
 
 @mens_stores.each do |shop|
   puts "#{shop.name} #{shop.annual_revenue}" 
